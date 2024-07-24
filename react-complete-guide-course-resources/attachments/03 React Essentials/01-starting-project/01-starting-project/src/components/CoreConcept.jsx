@@ -1,3 +1,4 @@
+import "./CoreConcept.css"
 
 
 export default function CoreConcept (props){ // {image,title,description} bu sekilde destructuring yaparak asagida direkt image, title, description yazabiliriz kisa yol.
