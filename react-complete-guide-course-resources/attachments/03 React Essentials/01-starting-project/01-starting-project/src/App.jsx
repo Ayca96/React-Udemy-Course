@@ -9,10 +9,12 @@ import TabButton from "./components/TabButton";
 
 function App() {
 
+let tabContent ="Please click a button"
+
   function handleSelect (selectedButton) {
     // selectedButton ="components","jsx"...
-
-    console.log(selectedButton);
+    tabContent = selectedButton;
+    console.log(tabContent);
   
   }
   return (
@@ -47,7 +49,7 @@ function App() {
       <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
     </menu>
  
-
+    {tabContent}
       </section>
         
       </main>
