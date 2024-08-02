@@ -1,5 +1,5 @@
 import React from "react";
-
+import  {useState} from "react";
 import componentsImg from "./assets/components.png";
 import {CORE_CONCEPTS} from "./data"
 import Header from "./components/Header/Header"
@@ -8,13 +8,12 @@ import TabButton from "./components/TabButton";
 
 
 function App() {
-
-let tabContent ="Please click a button"
+    const [selectedTopic, setSelectedTopic] = useState("Please click a button")
 
   function handleSelect (selectedButton) {
     // selectedButton ="components","jsx"...
-    tabContent = selectedButton;
-    console.log(tabContent);
+   setSelectedTopic(selectedButton)
+    console.log(selectedTopic);
   
   }
   return (
@@ -49,7 +48,7 @@ let tabContent ="Please click a button"
       <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
     </menu>
  
-    {tabContent}
+    {selectedTopic}
       </section>
         
       </main>
