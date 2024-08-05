@@ -9,7 +9,7 @@ import {EXAMPLES} from "./data"
 
 
 function App() {
-    const [selectedTopic, setSelectedTopic] = useState("components")
+    const [selectedTopic, setSelectedTopic] = useState()
 
   function handleSelect (selectedButton) {
     // selectedButton ="components","jsx"...
@@ -50,6 +50,7 @@ function App() {
     </menu>
  
     <div id="tab-content">
+    <p>Please select a topic.</p>
     <h3>{EXAMPLES[selectedTopic].title}</h3>
     <p>{EXAMPLES[selectedTopic].description}</p>
     <pre>
